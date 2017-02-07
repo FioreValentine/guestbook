@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+<p>
+    @{
+        bool hasPerm = (bool)ViewData["hasPerm"];
+    }
+    @if (hasPerm)
+    {
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id })
+    }
+    @Html.ActionLink("Вернуться к записям", "Index")
+</p>
+
+
+

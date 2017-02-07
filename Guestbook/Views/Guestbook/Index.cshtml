@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Гостевая книга";
+}
+
+<h2>Гостевая книга</h2>
+<p>
+    <a href="/Guestbook/Create">
+        Добавить новое сообщение
+    </a>
+</p>
+    @foreach (var entry in ViewBag.Entries)
+    {
+        <section class="contact">
+            <header>
+                <h3>@entry.Message</h3>
+            </header>
+            <p>
+                Отправлено @entry.Name @entry.DateAdd.ToLongDateString()
+            </p>
+        </section>
+    }
+

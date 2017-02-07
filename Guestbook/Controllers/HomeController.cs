@@ -10,6 +10,7 @@ namespace Guestbook.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.CurrentDate = System.DateTime.Now;
             return View();
         }
 
