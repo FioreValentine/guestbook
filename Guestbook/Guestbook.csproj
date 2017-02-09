@@ -158,6 +158,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChangePasswordModel.cs" />
+    <Compile Include="Models\CommentSummary.cs" />
     <Compile Include="Models\GuestbookContext.cs" />
     <Compile Include="Models\GuestbookEntry.cs" />
     <Compile Include="Models\LogOnModel.cs" />
@@ -182,6 +184,9 @@
     <Content Include="Views\Guestbook\Create.cshtml" />
     <Content Include="Views\Guestbook\Show.cshtml" />
     <Content Include="Views\Guestbook\Index.cshtml" />
+    <Content Include="Views\Guestbook\LogOn.cshtml" />
+    <Content Include="Views\Guestbook\ChangePassword.cshtml" />
+    <Content Include="Views\Guestbook\CommentSummary.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
