@@ -1,9 +1,10 @@
-﻿
+﻿@using Guestbook.Models
+
 @{
     ViewBag.Title = "Show";
 }
 
-<p>
+@*<p>
     @{
         bool hasPerm = (bool)ViewData["hasPerm"];
     }
@@ -12,7 +13,28 @@
         @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id })
     }
     @Html.ActionLink("Вернуться к записям", "Index")
-</p>
+</p>*@
 
+@model GuestbookEntry
+
+<h2>Запись гостевой книги</h2>
+<dl>
+    <dt>Имя:</dt>
+    <dd>@Model.Name</dd>
+    <dt>Дата:</dt>
+    <dd>@Model.DateAdd</dd>
+    <dt>Сообщение:</dt>
+    <dd>@Model.Message</dd>
+</dl>
+<p>
+    @{ 
+        bool hasPerm = (bool)ViewData["hasPerm"];
+    }
+    @if (hasPerm)
+    {
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id })
+    }
+    @Html.ActionLink("Вернуться к записям", "Index")
+</p>
 
 

@@ -20,9 +20,9 @@ namespace Guestbook.Controllers
                                      orderby entry.DateAdd descending
                                      select entry).Take(20);
             ViewBag.Entries = mostRecentEntries.ToList();
-            //var model = mostRecentEntries.ToList();
-            //return View(model);
-            return View();
+            var model = mostRecentEntries.ToList();
+            return View(model);
+            //return View();
         }
         
         public ActionResult Create()

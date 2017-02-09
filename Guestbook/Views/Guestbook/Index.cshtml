@@ -2,13 +2,16 @@
     ViewBag.Title = "Гостевая книга";
 }
 
+@using Guestbook.Models
+@model List<GuestbookEntry>
+
 <h2>Гостевая книга</h2>
 <p>
     <a href="/Guestbook/Create">
         Добавить новое сообщение
     </a>
 </p>
-    @foreach (var entry in ViewBag.Entries)
+    @foreach (var entry in Model)
     {
         <section class="contact">
             <header>
